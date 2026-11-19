@@ -1,0 +1,134 @@
+DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model and Selectors</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: darkblue;
+        }
+
+        /* Box Model */
+        .box {
+            background-color: lightblue;
+            padding: 30px;
+            border: 8px solid blue;
+            margin: 30px;
+            text-align: center;
+        }
+
+        .content {
+            background-color: yellow;
+            padding: 20px;
+        }
+
+        /* Class Selector */
+        .class-example {
+            color: green;
+            font-weight: bold;
+        }
+
+        /* ID Selector */
+        #id-example {
+            color: red;
+            font-size: 20px;
+        }
+
+        /* Attribute Selector */
+        input[type="text"] {
+            border: 2px solid green;
+            padding: 8px;
+        }
+
+        /* Child Selector */
+        .parent > p {
+            color: purple;
+            font-weight: bold;
+        }
+
+        /* Pseudo-class Selector */
+        button:hover {
+            background-color: orange;
+            color: white;
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .section {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Box Model and Selectors</h1>
+
+    <div class="section">
+        <h2>1. CSS Box Model</h2>
+
+        <div class="box">
+            MARGIN
+            <div style="background-color: lightgreen; padding: 20px;">
+                BORDER
+                <div style="background-color: pink; padding: 20px;">
+                    PADDING
+                    <div class="content">
+                        CONTENT
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p><b>Margin:</b> Space outside the border.</p>
+        <p><b>Border:</b> Line surrounding the element.</p>
+        <p><b>Padding:</b> Space between content and border.</p>
+        <p><b>Content:</b> Actual text or image inside the element.</p>
+    </div>
+
+    <div class="section">
+        <h2>2. CSS Selectors</h2>
+
+        <h3>Class Selector</h3>
+        <p class="class-example">
+            This is a Class Selector.
+        </p>
+
+        <h3>ID Selector</h3>
+        <p id="id-example">
+            This is an ID Selector.
+        </p>
+
+        <h3>Attribute Selector</h3>
+        <input type="text" placeholder="Enter your name">
+
+        <h3>Child Selector</h3>
+        <div class="parent">
+            <p>This is a direct child paragraph.</p>
+            <span>
+                <p>This is a nested paragraph.</p>
+            </span>
+        </div>
+
+        <h3>Pseudo-class Selector</h3>
+        <button>Move Mouse Here</button>
+
+    </div>
+
+</body>
+</html>
